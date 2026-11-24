@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://monili-vlr.github.io/thirdbrain-pii/sitemap.xml

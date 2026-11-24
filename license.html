@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>License and credits · ThirdBrain-PII</title>
+<meta name="description" content="The license of ThirdBrain-PII and the credits of the third-party software, models and data it uses.">
+<link rel="canonical" href="https://monili-vlr.github.io/thirdbrain-pii/license.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./" aria-label="ThirdBrain-PII home"><span class="logo" aria-hidden="true"><span class="b3">3B</span><span class="pii">PII</span></span> ThirdBrain-PII</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="main" id="nav" aria-label="Main"><ul><li><a href="./">Home</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="license.html" aria-current="page">License</a></li><li><a href="mailto:scrvlr80@gmail.com">Contact</a></li></ul></nav>
+</div></header>
+<main id="main" class="doc">
+<h1>License and credits</h1>
+<p>ThirdBrain-PII is proprietary software: all rights reserved. It includes or downloads software, models and data of other authors, each under its own license, listed below (from the product's NOTICE and THIRD_PARTY_NOTICES files).</p>
+<h2>ThirdBrain-PII license</h2>
+<pre>ThirdBrain-PII (formerly Nemesi-Studio; internal id: aegis)
+Copyright (c) 2026 the Author. All rights reserved.
+
+PROPRIETARY SOFTWARE LICENCE
+
+1. Ownership. This software, its source code, its lists and its documentation ("the Software") belong to
+   the developer of ThirdBrain-PII ("the Author"). The Software is licensed, not sold.
+
+2. What you may do. You may install and use the Software on your own devices, for yourself or inside your
+   organisation, within the terms under which you obtained it (free trial or paid licence).
+
+3. What you may not do without the Author's written permission: copy the Software for others, publish it,
+   sublicense it, sell it or rent it; modify it or make works derived from it; remove or change this notice;
+   use the Author's names or marks. Reading the code that is delivered in readable form does not grant any of
+   these rights. Rights that the law gives you and that cannot be waived are not limited by this licence.
+
+4. Third-party components. The Software includes or downloads software, models and data of other authors, each
+   under its own licence (see NOTICE and THIRD_PARTY_NOTICES.md). Those licences apply to those components and
+   are not changed by this one.
+
+5. Your data. The Software works on your device. This licence gives the Author no right over your documents,
+   your conversations or any other content you process with it.
+
+6. No warranty. The Software is provided "as is", without warranty of any kind, to the extent the law allows.
+   It reduces the personal data sent to an AI assistant; it does not guarantee that every item is found. Always
+   check the protected text before sending it.
+
+7. Liability. To the extent the law allows, the Author is not liable for indirect or consequential damages
+   arising from the use of the Software.
+
+8. End. This licence ends if you do not respect it; you must then stop using the Software and delete it.
+
+Contact: scrvlr80@gmail.com</pre>
+<h2>Third-party components</h2>
+<p class="small muted">The full license texts are in each package's folder or on the model pages.</p>
+<p>ThirdBrain-PII includes or downloads the following works. Each keeps its own license; the full license texts are in the package folders (<code>node_modules/&lt;name>/LICENSE</code>) or on the model pages.</p>
+<h3>Models</h3>
+<div class="table-scroll"><table><tr><th>Model</th><th>Use in ThirdBrain-PII</th><th>License</th><th>Source</th></tr><tr><td>OpenMed PII Italian / Spanish / English SuperClinical-Small-44M v1</td><td>recognising personal data (it, es, en); converted to ONNX with OpenMed's converter, vocabulary stored in 8 bits</td><td>Apache-2.0</td><td>huggingface.co/OpenMed (commits pinned in <code>data/openmed-models.json</code>)</td></tr><tr><td>OpenMed PII French SuperClinical-Small-44M v1 (ONNX, <code>OpenMed/OpenMed-PII-French-SuperClinical-Small-44M-v1-onnx-android</code>)</td><td>recognising personal data in French (L8); the official ONNX file as published, not converted, downloaded on first run and checked against its SHA-256</td><td>Apache-2.0 (verified on the model page and in the Hugging Face API, 2026-11-11)</td><td>huggingface.co/OpenMed/OpenMed-PII-French-SuperClinical-Small-44M-v1-onnx-android @ de66f96</td></tr><tr><td>OpenMed PII Portuguese SuperClinical-Small-44M v1 (ONNX, <code>OpenMed/OpenMed-PII-Portuguese-SuperClinical-Small-44M-v1-onnx-android</code>)</td><td>recognising personal data in Portuguese (L8); the official ONNX file as published, not converted, downloaded on first run and checked against its SHA-256</td><td>Apache-2.0 (verified on the model page)</td><td>huggingface.co/OpenMed/OpenMed-PII-Portuguese-SuperClinical-Small-44M-v1-onnx-android @ 1ae9008</td></tr><tr><td>intfloat/multilingual-e5-small</td><td>searching the history by meaning; official ONNX export, quantized to 8 bits</td><td>MIT</td><td>huggingface.co/intfloat/multilingual-e5-small @ 614241f</td></tr><tr><td>Tesseract trained data (ita, spa, eng)</td><td>reading text in images and scanned PDFs</td><td>MIT (packages <code>@tesseract.js-data/*</code>)</td><td>npm</td></tr></table></div>
+<h3>Libraries</h3>
+<div class="table-scroll"><table><tr><th>Package</th><th>License</th></tr><tr><td>@modelcontextprotocol/sdk</td><td>MIT</td></tr><tr><td>@modelcontextprotocol/ext-apps</td><td>MIT</td></tr><tr><td>@huggingface/tokenizers</td><td>Apache-2.0</td></tr><tr><td>onnxruntime-node</td><td>MIT</td></tr><tr><td>pdfjs-dist</td><td>Apache-2.0</td></tr><tr><td>tesseract.js</td><td>Apache-2.0</td></tr><tr><td>zod</td><td>MIT</td></tr></table></div>
+<h3>Name lists</h3>
+<p><code>data/names.json</code> is built from public lists of first names and surnames (sources in <code>data/NAMES-SOURCES.md</code>) and from lists prepared with AI assistance (<code>data/names-src/</code>), filtered against Hunspell dictionaries (licenses in <code>data/vocab-sources.json</code>). Dutch and Belgian first names and surnames also come from Wikidata (CC0 1.0, no attribution required): <code>data/names-src/wikidata-nl.txt</code>, built by <code>scripts/names-nl-wikidata.mjs</code>. Dutch and Belgian villages in <code>data/places.json</code> also come from Wikidata (CC0 1.0): <code>data/places-src/wikidata-nl.txt</code>, built by <code>scripts/places-nl-wikidata.mjs</code>. The names of illnesses in <code>data/health.json</code> (8 languages) come from Wikidata too (CC0 1.0): <code>data/health-src/</code>, built by <code>scripts/build-health.mjs</code>.</p>
+
+<h2>This website</h2>
+<p>This website uses no third-party code, fonts or images: everything is served from this site. The screenshots show the real panel with invented data. Claude is a product of Anthropic; ThirdBrain-PII is independent and not affiliated with or endorsed by Anthropic. The knowledge part follows the “LLM Wiki” pattern described by Andrej Karpathy; this project is not affiliated with him or endorsed by him.</p>
+</main>
+<footer class="site"><div class="wrap"><div><strong>ThirdBrain-PII</strong> · <a href="mailto:scrvlr80@gmail.com">scrvlr80@gmail.com</a></div><ul><li><a href="./">Home</a></li><li><a href="privacy.html">Privacy policy</a></li></ul></div></footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

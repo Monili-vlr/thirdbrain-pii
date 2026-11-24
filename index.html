@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ThirdBrain-PII: use Claude on real work, keep real names to yourself</title>
+<meta name="description" content="ThirdBrain-PII is a panel inside Claude chat. You write in the panel; names, addresses, contacts, IDs and health data are replaced with placeholders in your browser, and Claude's answer comes back with your real data, only for you.">
+<link rel="canonical" href="https://monili-vlr.github.io/thirdbrain-pii/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#c96442">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ThirdBrain-PII: use Claude on real work, keep real names to yourself">
+<meta property="og:description" content="Personal data is replaced in your browser before anything reaches Claude. The answer comes back with your real data, only for you.">
+<meta property="og:url" content="https://monili-vlr.github.io/thirdbrain-pii/">
+<meta property="og:image" content="https://monili-vlr.github.io/thirdbrain-pii/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ThirdBrain-PII",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Web browser (inside claude.ai)",
+  "softwareVersion": "0.3.16",
+  "description": "A panel inside Claude chat that replaces personal data with placeholders in the user's browser before it reaches Claude, and puts the real data back into Claude's answer for the user only.",
+  "url": "https://monili-vlr.github.io/thirdbrain-pii/",
+  "image": "https://monili-vlr.github.io/thirdbrain-pii/og.jpg",
+  "license": "https://monili-vlr.github.io/thirdbrain-pii/license.html"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="ThirdBrain-PII home"><span class="logo" aria-hidden="true"><span class="b3">3B</span><span class="pii">PII</span></span> ThirdBrain-PII</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="main" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#try">Try it</a></li>
+        <li><a href="#measures">Measures</a></li>
+        <li><a href="#limits">Limits</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#access">Request access</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">A privacy panel inside Claude</div>
+      <h1>Use Claude on real work. Keep real names to yourself.</h1>
+      <p class="lead">You write in the ThirdBrain-PII panel, inside the chat. Names, addresses, contacts, ID numbers and health data are replaced with placeholders in your browser. Claude works on the protected copy; its answer comes back with your real data, only for you.</p>
+      <div class="row">
+        <a class="btn primary" href="mailto:scrvlr80@gmail.com?subject=ThirdBrain-PII%20access%20request">Request access</a>
+        <a class="btn" href="#try">Try the example</a>
+      </div>
+      <p class="hero-note">Works in claude.ai as a custom connector. Version 0.3.16. Not yet listed in the Claude directory.</p>
+    </div>
+    <div>
+      <div class="video" data-src="assets/video/thirdbrain-pii.mp4" data-poster="assets/img/poster.jpg" data-label="ThirdBrain-PII product video, 3 minutes 29 seconds">
+        <img src="assets/img/poster.jpg" alt="The ThirdBrain-PII panel inside Claude: original text on the right, protected copy with placeholders on the left" width="1280" height="720">
+        <button aria-label="Play the product video with sound"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>Play video</span></button>
+      </div>
+      <p class="video-cap">Product video, 3:29, with voice. It loads only when you press play (6.8 MB).</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2>Three steps, all in the chat</h2>
+    <div class="grid g3" style="margin-top:28px">
+      <div class="card"><div class="step-n">1</div><h3>Write in the panel</h3><p class="muted">Ask Claude to open ThirdBrain-PII and write or paste in the ORIGINAL card. While you type, personal data is recognised in your browser and coloured by kind.</p></div>
+      <div class="card"><div class="step-n">2</div><h3>Check the mirror, then send</h3><p class="muted">The mirror shows exactly what Claude will receive: every covered value replaced by a placeholder. Missed something? Turn the Brush on and tap the word.</p></div>
+      <div class="card"><div class="step-n">3</div><h3>Read the real answer</h3><p class="muted">Claude answers with placeholders only. The panel reopens under the answer and shows it with your real data put back, in your browser.</p></div>
+    </div>
+    <p class="muted small" style="margin-top:20px">The connector server only hands over the panel page. The text you write is protected inside that page; no message of yours and no answer with real data reaches the server.</p>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="kicker">Features</div>
+    <h2>What the panel does</h2>
+    <p class="lead">Screenshots of the real panel (version 0.3.16) taken by the automated browser tests. Some are in Italian or Spanish: the panel speaks eight languages.</p>
+
+    <div class="feature">
+      <div><h3>Original and mirror, side by side</h3><p class="muted">On the right, what you write. On the left, what Claude receives. Each kind of data has its colour: names, addresses, places, dates, bank, contacts, identity, technical, health, companies, other, hidden. A tap on a colour in the legend switches that kind off.</p></div>
+      <button class="feature-img" data-lb="assets/img/shot-protected.jpg" data-cap="Original (right) and protected copy (left). Panel in Italian, example data." data-alt="Panel with original text and protected copy"><img src="assets/img/shot-protected.jpg" alt="Panel with the original text on the right and the protected copy on the left" loading="lazy" width="1100" height="676"></button>
+    </div>
+    <div class="feature">
+      <div><h3>The answer comes back with your data</h3><p class="muted">After Claude answers, the panel opens again under the answer with the real values put back, and with empty cards ready for the next message. Previous panels fold into one line and reopen with a tap.</p></div>
+      <button class="feature-img" data-lb="assets/img/shot-answer-restored.jpg" data-cap="Claude's answer at the top of the panel, real data restored in the browser. Example data." data-alt="Restored answer"><img src="assets/img/shot-answer-restored.jpg" alt="Claude's answer shown at the top of the panel with the real data restored" loading="lazy" width="1100" height="676"></button>
+    </div>
+    <div class="feature">
+      <div><h3>Built-in help on every button</h3><p class="muted">Press “?” and tap any button: the panel explains where it is, what it does, when it helps, what happens after, and what it does not do, without pressing it. Guided paths walk through common tasks.</p></div>
+      <button class="feature-img" data-lb="assets/img/shot-help-brush.jpg" data-cap="Help mode: the explanation of the Brush. Panel in Italian." data-alt="Help card"><img src="assets/img/shot-help-brush.jpg" alt="Help card explaining the Brush button" loading="lazy" width="1100" height="676"></button>
+    </div>
+    <div class="feature">
+      <div><h3>Memory and wiki, protected</h3><p class="muted">Add documents to a knowledge base kept in your browser. Each document is reviewed before it enters. The wiki gives one page per person, organisation, place and topic; sentences Claude writes are checked against the sources and the ones that do not hold are marked.</p></div>
+      <button class="feature-img" data-lb="assets/img/shot-wiki-page.jpg" data-cap="A wiki page: documents, sentences, links, and a page written by Claude with 1 of 2 sentences verified. Example data." data-alt="Wiki page"><img src="assets/img/shot-wiki-page.jpg" alt="Wiki page for a person, with a Claude-written sentence marked as not verified" loading="lazy" width="1100" height="676"></button>
+    </div>
+  </div>
+</section>
+
+<section id="functions" class="alt">
+  <div class="wrap">
+    <div class="kicker">Complete list</div>
+    <h2>Every function, by area</h2>
+    <p class="lead">Names as they appear in the English panel and in the code (<code>aegis2/panel/manual.ts</code>, <code>aegis2/web/server.mjs</code>). Only functions shown on the web version are listed.</p>
+
+    <div class="fn-group"><h3>Connector tools (what Claude can call)</h3><div class="table-scroll"><table class="fn">
+      <tr><td><code>thirdbrain_open</code></td><td>Shows the panel in the chat. No input. Read-only, not destructive, closed world.</td></tr>
+      <tr><td><code>thirdbrain_continue</code></td><td>Shows the panel again after an answer, with that answer at the top. Its only input is Claude's answer, which holds placeholders only (max 20,000 characters); it is not kept, logged or returned.</td></tr>
+      <tr><td><code>thirdbrain_help</code></td><td>Returns the user guide of the panel as fixed text, the same for everyone. No input.</td></tr>
+    </table></div></div>
+
+    <div class="fn-group"><h3>Writing and protection</h3><div class="table-scroll"><table class="fn">
+      <tr><td>Original</td><td>The card where you write or paste. Personal data is recognised in the browser and coloured by kind.</td></tr>
+      <tr><td>Mirror (“what Claude receives”)</td><td>Exactly the text Claude will get, every covered value replaced by a consistent placeholder.</td></tr>
+      <tr><td>Copy mirror</td><td>Copies the protected copy to the clipboard.</td></tr>
+      <tr><td>Brush</td><td>With the Brush on, a tap on a word covers it wherever it appears; a tap on a covered word opens its menu.</td></tr>
+      <tr><td>Remove from list · Change type</td><td>Leaves a covered value in clear, or changes its kind.</td></tr>
+      <tr><td>Add (selection)</td><td>Covers a selected piece of text as one value, with the chosen kind, including a custom name.</td></tr>
+      <tr><td>Legend</td><td>Twelve kinds of data, each with its colour; a tap switches a kind off. “All” switches every kind.</td></tr>
+      <tr><td>Ambiguous · Accept</td><td>Words that may or may not be personal data (a name that is also a word) stay covered until you decide, with a tick box each.</td></tr>
+      <tr><td>Did you mean …?</td><td>Offers to treat a value as one already known, so it gets the same placeholder.</td></tr>
+      <tr><td>ThirdBrain-PII Shield</td><td>ON: only the protected copy leaves. OFF: the panel stops protecting.</td></tr>
+      <tr><td>New chat</td><td>Empties the card and removes attachments.</td></tr>
+      <tr><td>Dictate</td><td>Writes what you say into the Original card; speech is recognised on the computer.</td></tr>
+    </table></div></div>
+
+    <div class="fn-group"><h3>Reading and checking</h3><div class="table-scroll"><table class="fn">
+      <tr><td>Data list (AUTO · ADDED · REMOVED · DOUBTS)</td><td>Every value of the message, grouped by who decided it. “O” shows originals, “S” the placeholders Claude reads.</td></tr>
+      <tr><td>All items</td><td>Every value protected in the session, also of messages already sent, with its placeholder.</td></tr>
+      <tr><td>Highlights · Mirror · Locked scroll</td><td>Show or hide colours, show or hide the mirror card, scroll both cards together.</td></tr>
+      <tr><td>Semi-transparent covers</td><td>Lets you read the placeholders under the covers in the mirror.</td></tr>
+    </table></div></div>
+
+    <div class="fn-group"><h3>Answers and files</h3><div class="table-scroll"><table class="fn">
+      <tr><td>Answer on top</td><td>When Claude reopens the panel, its answer appears at the top with the real data, in the browser.</td></tr>
+      <tr><td>Paste an answer by hand</td><td>Paste any answer with placeholders to see it with the original values.</td></tr>
+      <tr><td>Put the real data back into a file</td><td>Takes a file Claude made with placeholders (Word, Excel, PowerPoint, PDF, text) and saves a copy with the real data.</td></tr>
+      <tr><td>Read aloud</td><td>Reads the restored answer aloud with the computer's voice.</td></tr>
+      <tr><td>Citations check</td><td>Counts how many [F…] citations are backed by the cited passage: verified, uncertain, or general.</td></tr>
+      <tr><td>👍 · 👎 · Copy</td><td>Mark an answer as helpful or not; copy it.</td></tr>
+    </table></div></div>
+
+    <div class="fn-group"><h3>Documents, memory and wiki</h3><div class="table-scroll"><table class="fn">
+      <tr><td>+ (this chat only)</td><td>Puts a document in this chat only: text, Word, Excel, PowerPoint, PDF with text, RTF, ePub. Read in the browser; Claude gets the protected copy.</td></tr>
+      <tr><td>+ Memory</td><td>Adds documents to the knowledge, several at once: text, Markdown, CSV, JSON, HTML, Word, OpenDocument, Excel, PowerPoint, PDF.</td></tr>
+      <tr><td>Review · Confirm and add to the knowledge</td><td>A document enters the knowledge only after you review it; or choose “protect documents automatically”.</td></tr>
+      <tr><td>Attach to this message</td><td>Shows the protected passages that will go with your question, each with its [F…] tag, before sending.</td></tr>
+      <tr><td>Knowledge</td><td>Documents with summaries, links between documents about the same people, the tree of summaries.</td></tr>
+      <tr><td>Wiki (Index · Log · Rules · Clean-up · Export)</td><td>One page per person, organisation, place and topic; log of what entered and left; export to Markdown, with placeholders or with real values kept in the panel.</td></tr>
+      <tr><td>Delete · Forget all the knowledge</td><td>Removes one document, or everything after a confirmation.</td></tr>
+    </table></div></div>
+
+    <div class="fn-group"><h3>Panel</h3><div class="table-scroll"><table class="fn">
+      <tr><td>? (help)</td><td>Tap any button to read its explanation instead of pressing it; guided paths.</td></tr>
+      <tr><td>About · Try the sample document</td><td>The presentation (welcome, how to use, measures, system card) and an invented document full of fake data.</td></tr>
+      <tr><td>Language</td><td>Italian, Spanish, English, Catalan, German, French, Portuguese, Dutch.</td></tr>
+      <tr><td>Theme</td><td>Light or dark, following the chat.</td></tr>
+      <tr><td>Full screen ⤢ / ⤡</td><td>Puts the panel over the whole chat and back.</td></tr>
+      <tr><td>Keys</td><td>Ctrl+Enter (Cmd+Enter) sends; Esc closes the open menu, then the open screen.</td></tr>
+    </table></div></div>
+  </div>
+</section>
+
+<section id="try">
+  <div class="wrap">
+    <div class="kicker">Interactive</div>
+    <h2>See it at work</h2>
+    <p class="lead">A replay of what the real engine (panel 0.3.16) did with three example messages. <span class="tag example">EXAMPLE</span> All data is invented. This page does not run the engine and sends nothing anywhere.</p>
+    <div class="demo" id="demo-box" style="margin-top:20px">
+      <div class="demo-tabs" role="tablist" aria-label="Example messages">
+        <button role="tab" aria-selected="true">Example 1 · Tenant and law firm</button>
+        <button role="tab" aria-selected="false">Example 2 · Health</button>
+        <button role="tab" aria-selected="false">Example 3 · IT incident</button>
+      </div>
+      <p class="small muted" id="d-note"></p>
+      <div class="demo-cols">
+        <div class="pane"><div class="pane-h">Original · you write</div><div id="d-ori"></div></div>
+        <div class="pane"><div class="pane-h">Mirror · what Claude receives</div><div id="d-mir"></div></div>
+      </div>
+      <div class="demo-ctl">
+        <button class="btn" id="d-play" type="button">▶ Type it</button>
+        <label for="d-range" class="small muted">Characters typed</label>
+        <input type="range" id="d-range" min="0" value="0">
+        <label class="small"><input type="checkbox" id="d-brush" checked> Brush applied</label>
+        <span class="small muted" id="d-count" aria-live="polite"></span>
+      </div>
+      <div class="legend" aria-label="Kinds of data">
+        <span style="background:var(--names)">names</span><span style="background:var(--addresses)">addresses</span><span style="background:var(--places)">places</span><span style="background:var(--dates)">dates</span><span style="background:var(--bank)">bank</span><span style="background:var(--contacts)">contacts</span><span style="background:var(--identity)">identity</span><span style="background:var(--technical)">technical</span><span style="background:var(--health)">health</span><span style="background:var(--companies)">companies</span><span style="background:var(--hidden)">hidden</span>
+      </div>
+    </div>
+    <p class="small muted" style="margin-top:10px">A value is replaced in the mirror only when it is whole: half a name is shown grey until you finish typing it.</p>
+  </div>
+</section>
+
+<section id="measures" class="alt">
+  <div class="wrap">
+    <div class="kicker">Benchmarks</div>
+    <h2>Measured, with the proof named</h2>
+    <p class="lead">A value marked <span class="tag measured">MEASURED</span> has a test behind it, named below. A value marked <span class="tag estimate">ESTIMATE</span> has not been measured. Numbers, not promises.</p>
+
+    <div class="grid g2" style="margin-top:28px">
+      <div class="card">
+        <h3>Personal data covered, by language <span class="tag measured">MEASURED</span></h3>
+        <p class="small muted">Grey: engine before the last round of rules. Orange: engine now. Without recognition models, as the web panel runs.</p>
+        <div class="bars" id="bars"></div>
+        <p class="basis">Basis: pack G5, 14 whole documents per language written by helpers who never saw the engine, plus 25 ordinary sentences per language (<code>tests/fixtures/docs/g5</code>, <code>scripts/lang-measure.mjs</code>). Before = engine commit 4d69e5f, now = f691e8d. Measured 19 November 2026.</p>
+      </div>
+      <div class="grid" style="gap:20px">
+        <div class="card"><div class="stat">50 / 50</div><div>Browser tests of the web panel passed <span class="tag measured">MEASURED</span></div><p class="basis">Basis: <code>aegis2/web/bench/run.mjs</code> in real Chromium, server and panel 0.3.16. Run on 24 November 2026: 50 passed, 0 failed, 102 s including the build.</p></div>
+        <div class="card"><div class="stat">12 / 12</div><div>Automated no-leak and format tests passed <span class="tag measured">MEASURED</span></div><p class="basis">Basis: <code>tests/no-leak.test.ts</code> (4 tests: no real value in chat, context, tools, network, logs), <code>tests/web-formats.test.ts</code>, <code>tests/web-restore-file.test.ts</code>. Run on 24 November 2026 in 3.3 s.</p></div>
+        <div class="card"><div class="stat">773 ms</div><div>60 documents added to the knowledge, one after another <span class="tag measured">MEASURED</span></div><p class="basis">Basis: browser test W6, 24 November 2026, on the developer's Windows 11 PC. Your time depends on your computer.</p></div>
+        <div class="card"><div class="stat">177 / 200</div><div>Ordinary sentences left untouched (no false covers) <span class="tag measured">MEASURED</span></div><p class="basis">Basis: the 25 ordinary sentences per language of pack G5, 8 languages, 19 November 2026.</p></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px">Technical characteristics <span class="tag measured">VERIFIED IN CODE</span></h3>
+    <div class="table-scroll"><table class="spec">
+      <tr><th>Where text is processed</th><td>In the user's browser, inside the panel page. The panel declares no outside address (empty connect and resource domains), so the host blocks every outside call. Test NL1 checks that no real value appears in the chat, the model context, server requests or the console.</td></tr>
+      <tr><th>Server</th><td>Remote MCP server over Streamable HTTP, stateless; answers only at <code>/mcp</code> with POST; requests larger than 1 MB are refused. It keeps nothing.</td></tr>
+      <tr><th>Kinds of data</th><td>12: names, addresses, places, dates, bank, contacts, identity, technical, health, companies, other, hidden.</td></tr>
+      <tr><th>Interface languages</th><td>8: Italian, Spanish, English, Catalan, German, French, Portuguese, Dutch.</td></tr>
+      <tr><th>File formats (this chat)</th><td>Text, Word, Excel, PowerPoint, PDF with text, RTF, ePub.</td></tr>
+      <tr><th>File formats (memory)</th><td>Text, Markdown, CSV, JSON, HTML, Word, OpenDocument, Excel, PowerPoint, PDF with text.</td></tr>
+      <tr><th>Restore into a file</th><td>Word, Excel, PowerPoint, PDF, text.</td></tr>
+      <tr><th>Message size</th><td>Protected passages attached to a question: within 8,000 characters (tests W3, WK1). Answer passed back to the panel: up to 20,000 characters.</td></tr>
+      <tr><th>Requirements</th><td>A Claude account that can add a custom connector on claude.ai, a modern browser, and the choice “Allow always” when Claude asks to use ThirdBrain-PII.</td></tr>
+      <tr><th>Panel size</th><td>5,754 kB, one page, everything inside (engine, PDF reader, lists).</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="kicker">Gallery</div>
+    <h2>The real panel</h2>
+    <p class="lead">Screenshots from the automated browser tests of version 0.3.16. All data shown is invented.</p>
+    <div class="gallery" style="margin-top:24px">
+      <figure><button data-lb="assets/img/shot-welcome.jpg" data-cap="Presentation page (Spanish): the original on top, what Claude reads below." data-alt="Presentation page"><img src="assets/img/shot-welcome.jpg" alt="Presentation page of the panel in Spanish" loading="lazy" width="1100" height="676"></button><figcaption>Presentation (Spanish)</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-protected.jpg" data-cap="Original and protected copy (Italian)." data-alt="Protected text"><img src="assets/img/shot-protected.jpg" alt="Original and protected copy" loading="lazy" width="1100" height="676"></button><figcaption>Original and mirror</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-measures.jpg" data-cap="Measures inside the panel: coverage in eight languages (Italian)." data-alt="Measures"><img src="assets/img/shot-measures.jpg" alt="Measures screen of the panel" loading="lazy" width="1100" height="676"></button><figcaption>Measures in the panel</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-answer-restored.jpg" data-cap="Claude's answer with the real data, at the top of the panel." data-alt="Restored answer"><img src="assets/img/shot-answer-restored.jpg" alt="Restored answer" loading="lazy" width="1100" height="676"></button><figcaption>Answer restored</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-help-brush.jpg" data-cap="Help mode explains the Brush." data-alt="Help"><img src="assets/img/shot-help-brush.jpg" alt="Help mode" loading="lazy" width="1100" height="676"></button><figcaption>Help on every button</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-pdf.jpg" data-cap="A PDF waiting for review before it enters the knowledge." data-alt="PDF review"><img src="assets/img/shot-pdf.jpg" alt="PDF waiting for review" loading="lazy" width="1100" height="676"></button><figcaption>Document review</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-citations.jpg" data-cap="Citations checked against the source: 1 of 1 verified." data-alt="Citations"><img src="assets/img/shot-citations.jpg" alt="Citations check" loading="lazy" width="1100" height="676"></button><figcaption>Citations checked</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-wiki-page.jpg" data-cap="Wiki page with a Claude-written sentence marked not verified." data-alt="Wiki"><img src="assets/img/shot-wiki-page.jpg" alt="Wiki page" loading="lazy" width="1100" height="676"></button><figcaption>Wiki</figcaption></figure>
+      <figure><button data-lb="assets/img/shot-file-restored.jpg" data-cap="A file with placeholders turned back into a file with the real data." data-alt="File restored"><img src="assets/img/shot-file-restored.jpg" alt="File restored" loading="lazy" width="1100" height="676"></button><figcaption>Real data back into a file</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="limits" class="alt">
+  <div class="wrap">
+    <div class="kicker">Honest limits</div>
+    <h2>What it does not do</h2>
+    <ul class="limits lead" style="max-width:820px">
+      <li>It does not find every personal value. Coverage is 83–98% depending on the language on our test pack. Always check the mirror before sending; the Brush is there for what is missed.</li>
+      <li>Text typed directly into Claude's own message box is not protected. Only what you write in the panel is.</li>
+      <li>On claude.ai the protected text reaches Claude as context of the conversation; you then send a short message in Claude's box (the panel says “write ok and send”). The panel cannot type into Claude's box without the host showing a warning.</li>
+      <li>Choose “Allow always” when Claude asks to use ThirdBrain-PII. With “Allow once” the panel may not reopen after the answer.</li>
+      <li>Known misses in our examples: some company and clinic names, genetic variants (BRCA2), access tokens and API keys written without a label, towns written in lower case with no other sign, numbers spelled out in words.</li>
+      <li>After a new version, the connector has to be removed and added again on claude.ai to see it.</li>
+      <li>It is not listed in the Claude directory yet, and it has not been verified in the Claude Desktop app.</li>
+      <li>The knowledge and the mapping between real values and placeholders live in your browser storage: clearing the browser data deletes them, and they do not follow you to another device.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:860px">
+    <div class="kicker">FAQ</div>
+    <h2>Questions</h2>
+    <details><summary>Does Claude ever see my real data?</summary><p>Not for what you write in the panel with the Shield on: Claude receives the mirror, with placeholders. What the engine misses and you do not cover with the Brush does reach Claude, so check the mirror.</p></details>
+    <details><summary>Does your server see my text?</summary><p>No. The server only hands over the panel page. Recognition and replacement happen in your browser. The one input the server accepts is Claude's own answer, which already holds placeholders only, and it is not kept.</p></details>
+    <details><summary>Where are my real values kept?</summary><p>In the storage of your browser, on this device. Nothing is sent to the developer.</p></details>
+    <details><summary>Which languages does it work in?</summary><p>The interface is in eight languages: Italian, Spanish, English, Catalan, German, French, Portuguese, Dutch. Coverage for each is in the Measures section.</p></details>
+    <details><summary>Can I use it with files?</summary><p>Yes: the “+” puts a document in the current chat only, and “+ Memory” adds documents to the knowledge after your review. Files Claude makes with placeholders can be turned back into files with the real data.</p></details>
+    <details><summary>Does it work in Claude Code?</summary><p>No. Claude Code is outside the scope of this version; the panel says so and points to claude.ai.</p></details>
+    <details><summary>How much does it cost?</summary><p>No price has been set. Access is by request.</p></details>
+  </div>
+</section>
+
+<section id="access" class="cta alt">
+  <div class="wrap">
+    <h2>Bring Claude to your real work</h2>
+    <p class="lead" style="margin:0 auto">Write to ask for the connector address and the setup steps.</p>
+    <div class="row"><a class="btn primary" href="mailto:scrvlr80@gmail.com?subject=ThirdBrain-PII%20access%20request">Request access</a><a class="btn" href="#how">How it works</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div><span class="logo" aria-hidden="true"><span class="b3">3B</span><span class="pii">PII</span></span> <strong>ThirdBrain-PII</strong> · version 0.3.16<br>Contact: <a href="mailto:scrvlr80@gmail.com">scrvlr80@gmail.com</a></div>
+    <ul>
+      <li><a href="privacy.html">Privacy policy</a></li>
+      <li><a href="license.html">License and credits</a></li>
+      <li><a href="#measures">Measures</a></li>
+    </ul>
+    <div class="small">No cookies, no tracking, nothing loaded from other sites.<br>Claude is a product of Anthropic. ThirdBrain-PII is independent and not affiliated with Anthropic.</div>
+  </div>
+</footer>
+
+<dialog class="lightbox" aria-label="Image viewer">
+  <div class="lb-inner">
+    <img src="" alt="">
+    <button class="lb-btn lb-prev" aria-label="Previous image">‹</button>
+    <button class="lb-btn lb-next" aria-label="Next image">›</button>
+    <button class="lb-close" aria-label="Close">×</button>
+    <p class="lb-cap"></p>
+  </div>
+</dialog>
+
+<script src="assets/examples.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  const M = [['Nederlands', 89.3, 97.9], ['Français', 89.1, 96.6], ['Deutsch', 81.4, 94.9], ['Català', 80.6, 90.7], ['Italiano', 82.8, 90.5], ['Português', 83.3, 89.6], ['English', 76.4, 84.9], ['Español', 76.3, 83.3]];
+  const pct = (v) => ((v - 50) / 50 * 100).toFixed(1) + '%';
+  document.getElementById('bars').innerHTML = M.map(([n, b, a]) => `<div class="bar-row"><span>${n}</span><span class="bar-track" role="img" aria-label="${n}: ${b}% before, ${a}% now"><span class="bar-after" style="width:${pct(a)}"></span><span class="bar-before" style="width:${pct(b)}"></span></span><span class="bar-val">${a.toFixed(1)}%</span></div>`).join('') + '<div class="small muted" style="display:flex;justify-content:space-between;margin-left:122px;margin-right:76px"><span>50%</span><span>75%</span><span>100%</span></div>';
+})();
+</script>
+</body>
+</html>
