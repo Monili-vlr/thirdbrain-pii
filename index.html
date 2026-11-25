@@ -35,6 +35,7 @@
 .mai-home:hover{border-color:#A5B4FC;text-decoration:none}
 .mai-home i{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:linear-gradient(100deg,#5EEAD4,#A5B4FC 34%,#F0ABFC 66%,#FDBA74);flex:none}
 .mai-home i svg{width:12px;height:12px}</style>
+<link rel="stylesheet" href="https://monili-vlr.github.io/mobile.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -99,7 +100,7 @@
     <h2>What the panel does</h2>
     <p class="lead">Screenshots of the real panel (version 0.3.16) taken by the automated browser tests. Some are in Italian or Spanish: the panel speaks eight languages.</p>
 
-    <div class="feature">
+    <p class="mai-swipe-hint">Swipe to see more</p><div class="mai-swipe mai-wrap"><div class="feature">
       <div><h3>Original and mirror, side by side</h3><p class="muted">On the right, what you write. On the left, what Claude receives. Each kind of data has its colour: names, addresses, places, dates, bank, contacts, identity, technical, health, companies, other, hidden. A tap on a colour in the legend switches that kind off.</p></div>
       <button class="feature-img" data-lb="assets/img/shot-protected.jpg" data-cap="Original (right) and protected copy (left). Panel in Italian, example data." data-alt="Panel with original text and protected copy"><img src="assets/img/shot-protected.jpg" alt="Panel with the original text on the right and the protected copy on the left" loading="lazy" width="1100" height="676"></button>
     </div>
@@ -114,7 +115,7 @@
     <div class="feature">
       <div><h3>Memory and wiki, protected</h3><p class="muted">Add documents to a knowledge base kept in your browser. Each document is reviewed before it enters. The wiki gives one page per person, organisation, place and topic; sentences Claude writes are checked against the sources and the ones that do not hold are marked.</p></div>
       <button class="feature-img" data-lb="assets/img/shot-wiki-page.jpg" data-cap="A wiki page: documents, sentences, links, and a page written by Claude with 1 of 2 sentences verified. Example data." data-alt="Wiki page"><img src="assets/img/shot-wiki-page.jpg" alt="Wiki page for a person, with a Claude-written sentence marked as not verified" loading="lazy" width="1100" height="676"></button>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -124,7 +125,7 @@
     <h2>Every function, by area</h2>
     <p class="lead">Names as they appear in the English panel and in the code (<code>aegis2/panel/manual.ts</code>, <code>aegis2/web/server.mjs</code>). Only functions shown on the web version are listed.</p>
 
-    <div class="fn-group"><h3>Connector tools (what Claude can call)</h3><div class="table-scroll"><table class="fn">
+    <p class="mai-swipe-hint">Swipe to see more</p><div class="mai-swipe mai-wrap"><div class="fn-group"><h3>Connector tools (what Claude can call)</h3><div class="table-scroll"><table class="fn">
       <tr><td><code>thirdbrain_open</code></td><td>Shows the panel in the chat. No input. Read-only, not destructive, closed world.</td></tr>
       <tr><td><code>thirdbrain_continue</code></td><td>Shows the panel again after an answer, with that answer at the top. Its only input is Claude's answer, which holds placeholders only (max 20,000 characters); it is not kept, logged or returned.</td></tr>
       <tr><td><code>thirdbrain_help</code></td><td>Returns the user guide of the panel as fixed text, the same for everyone. No input.</td></tr>
@@ -178,7 +179,7 @@
       <tr><td>Theme</td><td>Light or dark, following the chat.</td></tr>
       <tr><td>Full screen ⤢ / ⤡</td><td>Puts the panel over the whole chat and back.</td></tr>
       <tr><td>Keys</td><td>Ctrl+Enter (Cmd+Enter) sends; Esc closes the open menu, then the open screen.</td></tr>
-    </table></div></div>
+    </table></div></div></div>
   </div>
 </section>
 
@@ -255,7 +256,7 @@
     <div class="kicker">Gallery</div>
     <h2>The real panel</h2>
     <p class="lead">Screenshots from the automated browser tests of version 0.3.16. All data shown is invented.</p>
-    <div class="gallery" style="margin-top:24px">
+    <p class="mai-swipe-hint">Swipe to see more</p><div class="gallery mai-swipe" style="margin-top:24px">
       <figure><button data-lb="assets/img/shot-welcome.jpg" data-cap="Presentation page (Spanish): the original on top, what Claude reads below." data-alt="Presentation page"><img src="assets/img/shot-welcome.jpg" alt="Presentation page of the panel in Spanish" loading="lazy" width="1100" height="676"></button><figcaption>Presentation (Spanish)</figcaption></figure>
       <figure><button data-lb="assets/img/shot-protected.jpg" data-cap="Original and protected copy (Italian)." data-alt="Protected text"><img src="assets/img/shot-protected.jpg" alt="Original and protected copy" loading="lazy" width="1100" height="676"></button><figcaption>Original and mirror</figcaption></figure>
       <figure><button data-lb="assets/img/shot-measures.jpg" data-cap="Measures inside the panel: coverage in eight languages (Italian)." data-alt="Measures"><img src="assets/img/shot-measures.jpg" alt="Measures screen of the panel" loading="lazy" width="1100" height="676"></button><figcaption>Measures in the panel</figcaption></figure>
