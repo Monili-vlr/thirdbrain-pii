@@ -177,21 +177,3 @@ footer.site a { color: var(--ink2); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
 }
-
-/* Phone: tighter spacing, full-width buttons, readable tables. */
-@media (max-width: 600px) {
-  body { font-size: 16px; }
-  section { padding: 44px 0; }
-  .hero { padding: 28px 0 32px; }
-  .wrap { padding: 0 16px; }
-  .row .btn { flex: 1 1 100%; justify-content: center; }
-  .card { padding: 18px; }
-  .feature { margin-top: 32px; }
-  .demo { padding: 14px; }
-  .demo-tabs button { flex: 1 1 100%; text-align: left; }
-  .demo-ctl input[type=range] { flex-basis: 100%; }
-  .pane { min-height: 140px; font-size: 14.5px; }
-  .stat { font-size: 30px; }
-  footer.site .wrap { flex-direction: column; }
-  .lb-btn { width: 38px; height: 38px; }
-}
