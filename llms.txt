@@ -1,0 +1,19 @@
+# ThirdBrain-PII
+
+> Use Claude on real work and keep real names to yourself. Personal data is replaced in your browser and comes back only for you.
+
+Made by Monili VLR (https://monili-vlr.github.io/). How to get it: A custom connector for Claude (claude.ai). Ask for the connector address through the Monili VLR contact form.
+Works in: Claude. Example of what you write: "Summarise this contract without sending the names."
+
+## Tools the AI can call (3)
+
+### Connector tools (what Claude can call)
+
+- `thirdbrain_open`: Shows the panel in the chat. No input. Read-only, not destructive, closed world.
+- `thirdbrain_continue`: Shows the panel again after an answer, with that answer at the top. Its only input is Claude's answer, which holds placeholders only (max 20,000 characters); it is not kept, logged or returned.
+- `thirdbrain_help`: Returns the user guide of the panel as fixed text, the same for everyone. No input.
+
+## More
+
+- [All Monili VLR products](https://monili-vlr.github.io/llms.txt)
+- [Contact and access](https://monili-vlr.github.io/#contact)
